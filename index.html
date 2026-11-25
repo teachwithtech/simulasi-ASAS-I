@@ -48,22 +48,7 @@
       --soft-shadow: 0 8px 24px -10px rgba(116, 105, 214, 0.16);
     }
 
-    /* Nuansa 2: Warm Peach */
-    [data-theme="peach"] {
-      --soft-bg: linear-gradient(135deg, #fffaf7 0%, #fff1eb 52%, #fef6ec 100%);
-      --soft-surface: rgba(255, 255, 255, 0.9);
-      --soft-surface-muted: #fff4ee;
-      --soft-border: #f8dfd3;
-      --soft-primary: #d4745c;
-      --soft-primary-hover: #be624b;
-      --soft-primary-soft: #ffefe8;
-      --soft-primary-text: #b85a43;
-      --soft-heading: #422c27;
-      --soft-text: #634d47;
-      --soft-shadow: 0 8px 24px -10px rgba(212, 116, 92, 0.16);
-    }
-
-    /* Nuansa 3: Soft Sage */
+    /* Nuansa 2: Soft Sage */
     [data-theme="sage"] {
       --soft-bg: linear-gradient(135deg, #f7fcf9 0%, #eef8f3 52%, #f4faf7 100%);
       --soft-surface: rgba(255, 255, 255, 0.9);
@@ -226,19 +211,13 @@
         <button data-nav="print" onclick="navigate('print')" class="nav-btn px-3.5 py-1.5 rounded-lg text-sm font-medium transition-all">Download Soal</button>
       </nav>
 
-      <!-- Pemilih Tema Warna Soft + Pengaturan Spreadsheet + Tombol Identitas Siswa -->
+      <!-- Pemilih Tema Warna Soft + Tombol Identitas Siswa -->
       <div class="flex items-center gap-2">
         <div class="flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl border border-slate-200 bg-white/80" title="Pilih Nuansa Warna Soft">
           <button type="button" data-theme-btn="lavender" onclick="setSoftTheme('lavender')" aria-label="Soft Lavender" class="theme-dot w-4 h-4 rounded-full bg-[#a79df0]"></button>
-          <button type="button" data-theme-btn="peach" onclick="setSoftTheme('peach')" aria-label="Warm Peach" class="theme-dot w-4 h-4 rounded-full bg-[#f0a48f]"></button>
           <button type="button" data-theme-btn="sage" onclick="setSoftTheme('sage')" aria-label="Soft Sage" class="theme-dot w-4 h-4 rounded-full bg-[#8bc5ae]"></button>
           <button type="button" data-theme-btn="sky" onclick="setSoftTheme('sky')" aria-label="Powder Sky" class="theme-dot w-4 h-4 rounded-full bg-[#8cb8eb]"></button>
         </div>
-
-        <button type="button" onclick="openSheetModal()" title="Pengaturan Google Spreadsheet" class="flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-emerald-700 transition-colors">
-          <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.375 19.5h17.25m-17.25 0a1.125 1.125 0 01-1.125-1.125M3.375 19.5h7.5c.621 0 1.125-.504 1.125-1.125m-9.75 0V5.625m0 12.75v-1.5c0-.621.504-1.125 1.125-1.125m18.375 2.625V5.625m0 12.75c0 .621-.504 1.125-1.125 1.125m1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125m0 3.75h-7.5A1.125 1.125 0 0112 18.375m9.75-12.75c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125m19.5 0v1.5c0 .621-.504 1.125-1.125 1.125M2.25 5.625v1.5c0 .621.504 1.125 1.125 1.125m0 0h17.25m-17.25 0h7.5c.621 0 1.125.504 1.125 1.125M3.375 8.25c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125m17.25-3.75h-7.5c-.621 0-1.125.504-1.125 1.125m8.625-1.125c.621 0 1.125.504 1.125 1.125v1.5c0 .621-.504 1.125-1.125 1.125m-17.25 0h7.5m-7.5 0c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125M12 10.875v-1.5m0 1.5c0 .621-.504 1.125-1.125 1.125M12 10.875c0 .621.504 1.125 1.125 1.125m-2.25 0c.621 0 1.125.504 1.125 1.125M13.125 12h7.5m-7.5 0c-.621 0-1.125.504-1.125 1.125M20.625 12c.621 0 1.125.504 1.125 1.125v1.5c0 .621-.504 1.125-1.125 1.125m-17.25 0h7.5M12 14.625v-1.5m0 1.5c0 .621-.504 1.125-1.125 1.125M12 14.625c0 .621.504 1.125 1.125 1.125m-2.25 0c.621 0 1.125.504 1.125 1.125m0 1.5v-1.5m0 0c0-.621.504-1.125 1.125-1.125m0 0h7.5"/></svg>
-          <span class="hidden lg:inline text-xs font-semibold">Spreadsheet</span>
-        </button>
 
         <button onclick="openIdentityModal()" class="flex items-center gap-2 px-3 py-1.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 transition-colors max-w-[165px] sm:max-w-[220px]">
           <div class="w-7 h-7 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
@@ -276,8 +255,6 @@
       </span>
       <span class="hidden sm:inline text-slate-300">&bull;</span>
       <span>Media Pembelajaran Interaktif Kelas VI</span>
-      <span class="hidden sm:inline text-slate-300">&bull;</span>
-      <span class="font-semibold text-slate-700">by puspitawinda_</span>
     </div>
   </footer>
 
@@ -329,37 +306,6 @@
         <button id="confirm-cancel" type="button" class="px-4 py-2 rounded-xl border border-slate-200 text-xs sm:text-sm font-semibold text-slate-600 hover:bg-slate-50">Batal</button>
         <button id="confirm-ok" type="button" class="px-4 py-2 rounded-xl bg-blue-600 text-white text-xs sm:text-sm font-semibold hover:bg-blue-700 transition-colors">Ya, Lanjutkan</button>
       </div>
-    </div>
-  </div>
-
-  <!-- ==================== MODAL PENGATURAN GOOGLE SPREADSHEET ==================== -->
-  <div id="sheet-modal" class="no-print fixed inset-0 z-50 hidden items-center justify-center bg-slate-900/40 backdrop-blur-xs p-4">
-    <div class="bg-white rounded-2xl border border-slate-200 w-full max-w-lg p-6 shadow-xl">
-      <div class="flex items-center justify-between mb-4">
-        <div>
-          <h3 class="text-lg font-bold text-slate-900">Pengaturan Google Spreadsheet</h3>
-          <p class="text-xs text-slate-500">Hasil latihan otomatis dikirim ke URL Google Apps Script Web App berikut.</p>
-        </div>
-        <button type="button" onclick="closeSheetModal()" class="p-1.5 rounded-lg text-slate-400 hover:text-slate-700 hover:bg-slate-100" aria-label="Tutup">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
-        </button>
-      </div>
-      <form onsubmit="saveScriptUrl(event)" class="space-y-4">
-        <div>
-          <label for="input-script-url" class="block text-xs font-semibold text-slate-700 mb-1.5">URL Web App Google Apps Script (/exec)</label>
-          <input id="input-script-url" type="url" required placeholder="https://script.google.com/macros/s/.../exec" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs sm:text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-500" />
-          <p class="text-[11px] text-slate-500 mt-1.5">URL kustom akan tersimpan otomatis di browser ini. Gunakan tombol Kembalikan Default untuk memakai URL bawaan.</p>
-        </div>
-        <div class="pt-2 flex flex-wrap items-center justify-between gap-2">
-          <button type="button" onclick="resetDefaultScriptUrl()" class="px-3.5 py-2 rounded-xl border border-slate-200 text-xs font-semibold text-slate-600 hover:bg-slate-50 transition-colors">
-            Kembalikan Default
-          </button>
-          <div class="flex items-center gap-2">
-            <button type="button" onclick="closeSheetModal()" class="px-4 py-2 rounded-xl border border-slate-200 text-xs sm:text-sm font-semibold text-slate-600 hover:bg-slate-50">Batal</button>
-            <button type="submit" class="px-5 py-2 rounded-xl bg-slate-900 text-white text-xs sm:text-sm font-semibold hover:bg-blue-600 transition-colors">Simpan URL</button>
-          </div>
-        </div>
-      </form>
     </div>
   </div>
 
@@ -2283,7 +2229,6 @@
     const STORAGE_KEY_ANSWERS    = 'mpi_k6_answers_v1';
     const STORAGE_KEY_RESULTS    = 'mpi_k6_results_v1';
     const STORAGE_KEY_THEME      = 'mpi_k6_soft_theme_v1';
-    const STORAGE_KEY_SCRIPT_URL = 'mpi_k6_script_url_v1';
     const STORAGE_KEY_SYNC       = 'mpi_k6_sync_status_v1';
 
     let state = {
@@ -2297,7 +2242,7 @@
       identity: { nama: '', kelas: '', absen: '', sekolah: '' },
       answers: {},              // { [subjectId]: { pg: {0: 1}, isian: {0: 'text'}, uraian: {0: 'text'} } }
       results: {},              // { [subjectId]: { pgScore, isianScore, uraianScore, totalScore, finalGrade, details, completedAt } }
-      syncStatus: {}            // { [subjectId]: { status: 'sending' | 'sent' | 'error' | 'idle', time: '' } }
+      syncStatus: {}            // { [subjectId]: { status: 'sending' | 'sent' | 'error' | 'idle', time: '', errorMsg: '' } }
     };
 
     function loadStorage() {
@@ -2308,15 +2253,15 @@
         if (ansData) state.answers = JSON.parse(ansData);
         const resData = localStorage.getItem(STORAGE_KEY_RESULTS);
         if (resData) state.results = JSON.parse(resData);
-        const savedUrl = localStorage.getItem(STORAGE_KEY_SCRIPT_URL);
-        if (savedUrl && savedUrl.trim()) state.scriptUrl = savedUrl.trim();
+        // Selalu gunakan URL Apps Script default agar tidak tertimpa URL lama yang salah
+        state.scriptUrl = DEFAULT_SCRIPT_URL;
         const syncData = localStorage.getItem(STORAGE_KEY_SYNC);
         if (syncData) {
           state.syncStatus = JSON.parse(syncData);
           // Jika halaman sebelumnya tertutup saat status 'sending', kembalikan ke 'idle'
           Object.keys(state.syncStatus).forEach(k => {
             if (state.syncStatus[k] && state.syncStatus[k].status === 'sending') {
-              state.syncStatus[k] = { status: 'idle', time: '' };
+              state.syncStatus[k] = { status: 'idle', time: '', errorMsg: '' };
             }
           });
         }
@@ -2338,54 +2283,18 @@
     }
 
     /* =========================================================================
-       2B. INTEGRASI GOOGLE SPREADSHEET (PENGATURAN URL & KIRIM DATA)
+       2B. INTEGRASI GOOGLE SPREADSHEET (KIRIM DATA DENGAN VERIFIKASI RESPONS)
        ========================================================================= */
-    function openSheetModal() {
-      const input = document.getElementById('input-script-url');
-      if (input) input.value = state.scriptUrl || DEFAULT_SCRIPT_URL;
-      const modal = document.getElementById('sheet-modal');
-      modal.classList.remove('hidden');
-      modal.classList.add('flex');
-    }
-
-    function closeSheetModal() {
-      const modal = document.getElementById('sheet-modal');
-      modal.classList.add('hidden');
-      modal.classList.remove('flex');
-    }
-
-    function saveScriptUrl(e) {
-      e.preventDefault();
-      const val = (document.getElementById('input-script-url').value || '').trim();
-      if (!val || !val.startsWith('http')) {
-        showToast('Masukkan URL Web App yang valid (diawali https://)');
-        return;
-      }
-      state.scriptUrl = val;
-      try { localStorage.setItem(STORAGE_KEY_SCRIPT_URL, val); } catch (err) {}
-      closeSheetModal();
-      showToast('URL Google Spreadsheet berhasil disimpan');
-      render();
-    }
-
-    function resetDefaultScriptUrl() {
-      state.scriptUrl = DEFAULT_SCRIPT_URL;
-      try { localStorage.removeItem(STORAGE_KEY_SCRIPT_URL); } catch (err) {}
-      const input = document.getElementById('input-script-url');
-      if (input) input.value = DEFAULT_SCRIPT_URL;
-      showToast('URL dikembalikan ke pengaturan default');
-    }
-
     function renderSyncBadge(subId) {
-      const sync = state.syncStatus[subId] || { status: 'idle', time: '' };
+      const sync = state.syncStatus[subId] || { status: 'idle', time: '', errorMsg: '' };
       if (sync.status === 'sending') {
         return `<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-blue-50 text-blue-700 border border-blue-200"><span class="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse"></span>Mengirim...</span>`;
       }
       if (sync.status === 'sent') {
-        return `<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">✓ Terkirim ke Spreadsheet${sync.time ? ` (${escapeHtml(sync.time)})` : ''}</span>`;
+        return `<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">✓ Terkirim ke Rekap${sync.time ? ` (${escapeHtml(sync.time)})` : ''}</span>`;
       }
       if (sync.status === 'error') {
-        return `<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-rose-50 text-rose-700 border border-rose-200">! Gagal kirim</span>`;
+        return `<span title="${escapeHtml(sync.errorMsg || 'Gagal mengirim ke Spreadsheet')}" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-rose-50 text-rose-700 border border-rose-200">! Gagal kirim${sync.errorMsg ? `: ${escapeHtml(sync.errorMsg)}` : ''}</span>`;
       }
       return `<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-amber-50 text-amber-700 border border-amber-200">Belum terkirim</span>`;
     }
@@ -2397,7 +2306,7 @@
 
       const activeUrl = (state.scriptUrl || DEFAULT_SCRIPT_URL).trim();
       if (!activeUrl || !activeUrl.startsWith('http')) {
-        state.syncStatus[subId] = { status: 'error', time: '' };
+        state.syncStatus[subId] = { status: 'error', time: '', errorMsg: 'URL tidak valid' };
         saveSyncToStorage();
         render();
         showToast('URL Google Spreadsheet belum valid');
@@ -2419,30 +2328,78 @@
         predikat: pred.label
       };
 
-      state.syncStatus[subId] = { status: 'sending', time: '' };
+      state.syncStatus[subId] = { status: 'sending', time: '', errorMsg: '' };
       saveSyncToStorage();
       render();
 
+      const timeStr = new Date().toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' });
+
       try {
-        await fetch(activeUrl, {
+        // 1. Kirim dengan mode CORS (simple POST text/plain tanpa preflight) agar respons JSON Apps Script terbaca
+        const response = await fetch(activeUrl, {
           method: "POST",
-          mode: "no-cors",
+          redirect: "follow",
           headers: { "Content-Type": "text/plain;charset=utf-8" },
           body: JSON.stringify(payload)
         });
-        const timeStr = new Date().toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' });
-        state.syncStatus[subId] = { status: 'sent', time: timeStr };
+
+        const rawText = await response.text();
+        let parsed = null;
+        try { parsed = JSON.parse(rawText); } catch (_) {}
+
+        if (parsed && parsed.status === "success") {
+          state.syncStatus[subId] = { status: 'sent', time: timeStr, errorMsg: '' };
+          saveSyncToStorage();
+          render();
+          showToast(isManual ? `Hasil ${sub.shortName} berhasil masuk ke Rekap Spreadsheet` : `Nilai ${sub.shortName} berhasil masuk ke Rekap Spreadsheet`);
+          return true;
+        }
+
+        if (parsed && parsed.status === "error") {
+          const msg = parsed.message || 'Error di Apps Script';
+          state.syncStatus[subId] = { status: 'error', time: '', errorMsg: msg };
+          saveSyncToStorage();
+          render();
+          showToast(`Gagal simpan ke Spreadsheet: ${msg}`);
+          return false;
+        }
+
+        // Jika respons berupa halaman HTML (biasanya layar login Google karena akses belum disetel ke "Siapa saja")
+        if (rawText && rawText.trim().startsWith('<')) {
+          state.syncStatus[subId] = { status: 'error', time: '', errorMsg: 'Setel akses Deploy ke "Siapa saja"' };
+          saveSyncToStorage();
+          render();
+          showToast('Gagal: Akses Web App Apps Script belum disetel ke "Siapa saja (Anyone)".');
+          return false;
+        }
+
+        state.syncStatus[subId] = { status: 'sent', time: timeStr, errorMsg: '' };
         saveSyncToStorage();
         render();
-        showToast(isManual ? `Hasil ${sub.shortName} berhasil dikirim ulang ke Spreadsheet` : `Nilai ${sub.shortName} terkirim ke Spreadsheet`);
+        showToast(`Nilai ${sub.shortName} terkirim ke Spreadsheet`);
         return true;
-      } catch (err) {
-        console.error('Gagal mengirim ke Spreadsheet:', err);
-        state.syncStatus[subId] = { status: 'error', time: '' };
-        saveSyncToStorage();
-        render();
-        showToast(`Gagal mengirim ${sub.shortName}. Periksa internet lalu klik Kirim Ulang.`);
-        return false;
+      } catch (corsErr) {
+        // 2. Fallback no-cors jika lingkungan browser/preview membatasi pembacaan respons redirect
+        try {
+          await fetch(activeUrl, {
+            method: "POST",
+            mode: "no-cors",
+            headers: { "Content-Type": "text/plain;charset=utf-8" },
+            body: JSON.stringify(payload)
+          });
+          state.syncStatus[subId] = { status: 'sent', time: timeStr, errorMsg: '' };
+          saveSyncToStorage();
+          render();
+          showToast(isManual ? `Hasil ${sub.shortName} dikirim ulang ke Spreadsheet` : `Nilai ${sub.shortName} dikirim ke Spreadsheet`);
+          return true;
+        } catch (err) {
+          console.error('Gagal mengirim ke Spreadsheet:', err);
+          state.syncStatus[subId] = { status: 'error', time: '', errorMsg: 'Koneksi diblokir / offline' };
+          saveSyncToStorage();
+          render();
+          showToast(`Gagal mengirim ${sub.shortName}. Buka file langsung di Chrome lalu klik Kirim Ulang.`);
+          return false;
+        }
       }
     }
 
@@ -2460,14 +2417,6 @@
       if (successCount === doneIds.length) {
         showToast(`Semua ${successCount} hasil mapel berhasil dikirim ke Spreadsheet`);
       }
-    }
-
-    function saveAnswersToStorage() {
-      try { localStorage.setItem(STORAGE_KEY_ANSWERS, JSON.stringify(state.answers)); } catch (e) {}
-    }
-
-    function saveResultsToStorage() {
-      try { localStorage.setItem(STORAGE_KEY_RESULTS, JSON.stringify(state.results)); } catch (e) {}
     }
 
     function getSubjectAnswers(subId) {
@@ -2766,7 +2715,7 @@
     }
 
     function setSoftTheme(themeName, silent = false) {
-      const validThemes = ['lavender', 'peach', 'sage', 'sky'];
+      const validThemes = ['lavender', 'sage', 'sky'];
       const chosen = validThemes.includes(themeName) ? themeName : 'lavender';
       document.documentElement.setAttribute('data-theme', chosen);
       document.querySelectorAll('[data-theme-btn]').forEach(btn => {
@@ -2776,7 +2725,6 @@
       if (!silent) {
         const labels = {
           lavender: 'Soft Lavender',
-          peach: 'Warm Peach',
           sage: 'Soft Sage',
           sky: 'Powder Sky'
         };
@@ -3291,9 +3239,6 @@
             <button onclick="openIdentityModal()" class="px-3.5 py-2 rounded-xl border border-slate-200 bg-white text-xs font-semibold text-slate-700 hover:bg-slate-50">
               ${state.identity.nama ? 'Edit Identitas' : 'Isi Identitas Siswa'}
             </button>
-            <button onclick="openSheetModal()" class="px-3.5 py-2 rounded-xl border border-emerald-200 bg-emerald-50/70 text-xs font-semibold text-emerald-800 hover:bg-emerald-100 transition-colors">
-              Pengaturan Spreadsheet
-            </button>
             ${completed.length > 0 ? `
               <button onclick="sendAllToSpreadsheet()" class="px-4 py-2 rounded-xl bg-slate-900 text-white text-xs font-bold hover:bg-blue-600 transition-colors">
                 Kirim Semua ke Spreadsheet
@@ -3746,7 +3691,7 @@
 
       body += `
           <div style="margin-top: 22px; padding-top: 8px; border-top: 1px solid #cbd5e1; text-align: center; font-family: Arial, sans-serif; font-size: ${forWord ? '8.5pt' : '10px'}; color: #475569;">
-            quixlab.id &bull; Media Pembelajaran Interaktif Kelas VI &bull; by puspitawinda_
+            quixlab.id &bull; Media Pembelajaran Interaktif Kelas VI
           </div>
         </div>`;
       return body;
